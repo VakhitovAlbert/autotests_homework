@@ -14,6 +14,15 @@
 # iuy qnikkgxvxfxtxv
 
 import random
+slovar = 'abcdefghijklmnopqrstuvwxyz'
+
+def generate_random_name():
+    while True:
+        yield f"{''.join(random.choice(slovar) for _ in range(random.randint(1, 15)))} {''.join(random.choice(slovar) for _ in range(random.randint(1, 15)))}"
 
 
-# Здесь пишем код
+gen = generate_random_name()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
